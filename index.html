@@ -19,13 +19,19 @@
     </nav>
     <!-- CONTENEDOR DE PRODUCTOS -->
     <div class="container-products">
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Buscar"
+        id="buscador"
+      />
       <div class="row">
         <div class="col">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Producto 1</h5>
               <p class="card-text">Descripcion del producto</p>
-              <a href="#" class="btn btn-primary">Agregar</a>
+              <button class="btn btn-primary" id="boton1">Agregar</button>
             </div>
           </div>
         </div>
@@ -34,7 +40,7 @@
             <div class="card-body">
               <h5 class="card-title">Producto 2</h5>
               <p class="card-text">Descripcion del producto</p>
-              <a href="#" class="btn btn-primary">Agregar</a>
+              <button class="btn btn-primary" id="boton2">Agregar</button>
             </div>
           </div>
         </div>
@@ -43,34 +49,41 @@
             <div class="card-body">
               <h5 class="card-title">Producto 3</h5>
               <p class="card-text">Descripcion del producto</p>
-              <a href="#" class="btn btn-primary">Agregar</a>
+              <button class="btn btn-primary" id="boton3">Agregar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="carrito"></div>
     <!-- FORMULARIO DE CONTACTO -->
     <div class="container">
       <div class="container">
         <h2>FORMULARIO DE CONTACTO</h2>
       </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label"
+      <form id="formulario" action="/redireccion">
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label"
           >Nombre y Apellido</label
-        >
-        <input type="text" class="form-control" id="formGroupExampleInput" />
-      </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label"
+          >
+          <input type="text" class="form-control" id="nombre" />
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label"
           >Correo Electrónico</label
-        >
-        <input type="text" class="form-control" id="formGroupExampleInput2" />
+          >
+          <input type="text" class="form-control" id="correo" />
+        </div>
+        <button type="submit" class="btn btn-outline-success">
+          Enviar información
+        </button>
       </div>
-      <button type="button" class="btn btn-outline-success">
-        Enviar información
-      </button>
-    </div>
+    </form>
+    <a class="enlace" href="https://developer.mozilla.org/es/"
+      >Material extra sobre DOM</a
+    >
     <!-- SCRIPTS -->
-    <script src="./scripts/clase7.js"></script>
+    <script src="./scripts/clase9.js"></script>
   </body>
 </html>
