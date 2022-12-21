@@ -124,3 +124,30 @@ const estudiante2 = {
 };
 
 console.log(estudiante2); */
+
+//spread operator array de objetos
+
+/* const productos = [
+  {
+    nombre: "Coca Cola",
+    precio: 100,
+  },
+  {
+    nombre: "Pepsi",
+    precio: 150,
+  },
+  {
+    nombre: "Fanta",
+    precio: 200,
+  },
+];
+
+const productos2 = [...productos, { nombre: "Sprite", precio: 250 }];
+
+const {
+  0: { nombre: nombre1, precio: precio1 },
+  1: { nombre: nombre2, precio: precio2 },
+  2: { nombre: nombre3, precio: precio3 },
+} = productos;
+
+console.log(nombre1, precio1); */

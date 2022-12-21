@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Javascript - CoderHouse</title>
 
     <link rel="stylesheet" href="bootstrap.css" />
   </head>
@@ -12,9 +12,7 @@
     <nav class="navbar bg-light">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">Coder-Commerce</span>
-        <button type="button" class="btn btn-primary">
-          Mi Carrito <span class="badge text-bg-secondary">4</span>
-        </button>
+        <button class="btn btn-primary"><a href="#carrito">Mi carrito</a></button>
       </div>
     </nav>
     <!-- CONTENEDOR DE PRODUCTOS -->
@@ -31,7 +29,7 @@
             <div class="card-body">
               <h5 class="card-title">Producto 1</h5>
               <p class="card-text">Descripcion del producto</p>
-              <button class="btn btn-primary" id="boton1">Agregar</button>
+              <button class="btn btn-primary" id="boton">Agregar</button>
             </div>
           </div>
         </div>
@@ -40,7 +38,7 @@
             <div class="card-body">
               <h5 class="card-title">Producto 2</h5>
               <p class="card-text">Descripcion del producto</p>
-              <button class="btn btn-primary" id="boton2">Agregar</button>
+              <button class="btn btn-primary" id="boton">Agregar</button>
             </div>
           </div>
         </div>
@@ -49,12 +47,13 @@
             <div class="card-body">
               <h5 class="card-title">Producto 3</h5>
               <p class="card-text">Descripcion del producto</p>
-              <button class="btn btn-primary" id="boton3">Agregar</button>
+              <button class="btn btn-primary" id="boton">Agregar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- ESPACIO PARA MOSTRAR INFO DEL CARRITO -->
     <div id="carrito"></div>
     <!-- FORMULARIO DE CONTACTO -->
     <div class="container">
@@ -80,10 +79,35 @@
         </button>
       </div>
     </form>
-    <a class="enlace" href="https://developer.mozilla.org/es/"
-      >Material extra sobre DOM</a
-    >
+    
+    <!-- ESPACIO PARA MOSTRAR INFO DEL FORMULARIO -->
+    <div class="container">
+      <div class="info"></div>
+    </div>
+      
+    <!-- FORMULARIO DE RESERVA -->
+    <div class="container">
+      <select class="form-select mt-5" id="day">
+        <option selected>Selecciona el día</option>
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miercoles">Miercoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>
+      </select>
+      
+      <select class="form-select mt-5" id="hr">
+        <option selected>Selecciona la hora</option>
+        <option value="15:00">15:00 Hs</option>
+        <option value="18:00">18:00 Hs</option>
+        <option value="21:00">21:00 Hs</option>
+      </select>
+  
+    <button type="submit" class="btn-reservar btn btn-primary mt-5">Reservar</button>
+      <div class="selector mt-5">Detalles de tu reserva</div>
+  </div>
     <!-- SCRIPTS -->
-    <script src="./scripts/clase12.js"></script>
+    <script src="./scripts/afterDom.js"></script>
   </body>
-</html>
+  </html>
+  

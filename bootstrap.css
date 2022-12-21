@@ -12020,3 +12020,8 @@ select.form-control[multiple] {
 .container{
   padding: 1rem;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+}
