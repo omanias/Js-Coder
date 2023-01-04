@@ -48,6 +48,7 @@ function leerDatosProducto(producto) {
   const infoProducto = {
     titulo: producto.querySelector(".card-title").textContent,
     texto: producto.querySelector(".card-text").textContent,
+    id: producto.querySelector(".btn").getAttribute("data-id"),
   };
 
   //Agrega elementos al carrito
@@ -71,7 +72,7 @@ function carritoHTML() {
     <div class="container">
     <h5>${producto.titulo}</h5>
     <p>${producto.texto}</p>
-    <button class="btn btn-danger">Eliminar</button>
+    <button class="btn btn-danger" id="${producto.id}">Eliminar</button>
     </div>
     `;
     carrito.appendChild(row);
@@ -80,6 +81,20 @@ function carritoHTML() {
 
 function limpiarHTML() {
   carrito.innerHTML = "";
+}
+
+carrito.addEventListener("click", eliminarProducto);
+
+// Eliminar productos del carrito
+
+function eliminarProducto(e) {
+  if (e.target.classList.contains("btn-danger")) {
+    let productoID = e.target.getAttribute("id");
+    articulosCarrito = articulosCarrito.filter(
+      (producto) => producto.id !== productoID
+    );
+    carritoHTML();
+  }
 }
 
 ////--------OPCIONES MULTIPLES--------------//////
