@@ -1,44 +1,53 @@
-/* let num;
+/* let numero;
 
-num = 1;
+numero = 1;
 
-num++;
+numero++;
 
-console.log(num); */
+console.log(numero); */
 
-//Operador ternario
+// let temperatura = 40;
 
-/* if (temperatura < 30) {
-    console.log("Fresco");
+/* if (temperatura > 35) {
+  console.log("Hace calor");
 } else {
-    console.log("Caluroso");
-} */
-/* 
-let temperatura;
-
-temperatura = 40;
-
-temperatura < 30 ? console.log("Fresco") : console.log("Caluroso");
- */
-// console.log(temperatura);
-
-//Operador &&
-
-/* const cursos = [];
-
-/* if (cursos.length === 0) {
-  console.log("Sin cursos");
+  console.log("Templado");
 } */
 
-//cursos.length === 0 && console.log("sin cursos");
+//OPERADOR TERNARIO
 
-// console.log(cursos); */
+// temperatura > 35 ? console.log("Hace calor") : console.log("Templado");
 
-// Operador OR => ||
+/* let edad = prompt("edad", 18);
+
+let mensaje =
+  edad <= 10
+    ? "Niño"
+    : edad <= 18
+    ? "Adolescente"
+    : edad <= 30
+    ? "Adulto"
+    : "edad inusual";
+
+alert(mensaje); */
+
+//OPERADOR &&
+
+//Solo si la condicion es verdadera
+
+// const carrito = [];
+
+/* if (carrito.length === 0) {
+  console.log("Sin productos");
+} */
+
+// carrito.length===0 && console.log("No hay productos")
+
+//OPERADOR || - OR
 
 /* const usuario1 = {
-  nombre: "Coder",
-  edad: 25,
+  nombre: "Gabriel",
+  edad: 30,
 };
 
 const usuario2 = null;
@@ -46,21 +55,19 @@ const usuario2 = null;
 console.log(usuario1 || "El usuario no existe");
 console.log(usuario2 || "El usuario no existe"); */
 
-// console.log(usuario2);
-/* 
-console.log(0 || "f"); // "f"
-console.log(null || "f"); // "f"
-console.log(undefined || "f"); // "f"
-console.log("" || "f"); // "f"
-console.log(NaN || "f"); //"f"
-console.log(false || "f"); // "f"
-console.log(true || "f"); // true
-console.log(50 || "f"); // 50
-console.log("CoderHouse" || "f"); // CoderHouse */
+/* console.log(0 || "F"); //F
+console.log(null || "F"); //F
+console.log(undefined || "F"); //F
+console.log("" || "F"); //F
+console.log(NaN || "F"); //F
+console.log(false || "F"); //F
+console.log(true || "F"); //true
+console.log(50 || "F"); // 50
+console.log("Hola mundo" || "F"); //Hola mundo */
 
-/* let carrito;
+// let carrito;
 
-let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
+/* let carritoLocalStorage = JSON.parse(localStorage.getItem("carrito"));
 
 if (carritoLocalStorage) {
   carrito = carritoLocalStorage;
@@ -68,44 +75,54 @@ if (carritoLocalStorage) {
   carrito = [];
 } */
 
-// const carrito = JSON.parse(localStorage.getItem("carrito")) || []
+// let carrito =JSON.parse(localStorage.getItem("carrito")) || []
+
+//ACCESO CONDICIONAL A UN OBJETO
 
 /* const usuario = {
-  nombre: "CoderHouse",
-  cursando: true,
-  curso: {
-    entrega: "tercera",
+  nombre: "Franco",
+  edad: 25,
+  cursos: {
+    javascript: "En curso",
   },
 };
 
-console.log(usuario?.curso?.desafios); */
+console.log(usuario?.cursos?.html || "La propiedad no existe"); */
+
+//DESESTRUCTURACION DE OBJETOS
 
 /* const usuario = {
-  nombre: "Coder",
-  apellido: "House",
+  nombre: "Franco",
   edad: 25,
-  cursando: true,
-};
+}; */
 
-/* let nombre = usuario.nombre;
-let cursando = usuario.cursando;
- */
+/* console.log(usuario.nombre);
+console.log(usuario.edad);
+console.log(usuario.domicilio); */
 
-/*const { apellido, edad } = usuario;
+/*let nombre = usuario.nombre;
 
-/* console.log(apellido);
+console.log(nombre); */
+
+/* const { nombre, edad } = usuario;
+
+console.log(nombre);
 console.log(edad); */
 
-/* const nombres = ["Juan", "Mateo", "Roy"];
+//DESESTRUCTURACION DE ARRAYS
 
-const [, , c] = nombres;
+/* const alumnos = ["Franco", "Maite", "Gabriel", "Marianela"];
+
+const [, , c, d] = alumnos;
 
 console.log(c); */
 
-// Spread
+// console.log(Gabriel);
 
-/* const frutas = ["🍈", "🍋", "🍒"];
-const bebidas = ["🧉", "☕", "🧃"];
+//SPREAD OPERATOR ARRAYS
+
+/* const frutas = ["🍉", "🍒", "🍊", "🍐"];
+const bebidas = ["🥤", "☕", "🍹", "🥂"];
 
 const ambos = [...frutas, ...bebidas];
 
@@ -113,41 +130,16 @@ frutas.push(...bebidas);
 
 console.log(frutas); */
 
-/* const estudiante = {
-  nombre: "juan",
-  edad: 20,
+//SPREAD OPERATOR OBJETOS
+
+/* const usuario = {
+  nombre: "Franco",
+  edad: 25,
 };
 
-const estudiante2 = {
-  ...estudiante,
-  cursando: true,
+const usuario2 = {
+  ...usuario,
+  curso: "js",
 };
 
-console.log(estudiante2); */
-
-//spread operator array de objetos
-
-/* const productos = [
-  {
-    nombre: "Coca Cola",
-    precio: 100,
-  },
-  {
-    nombre: "Pepsi",
-    precio: 150,
-  },
-  {
-    nombre: "Fanta",
-    precio: 200,
-  },
-];
-
-const productos2 = [...productos, { nombre: "Sprite", precio: 250 }];
-
-const {
-  0: { nombre: nombre1, precio: precio1 },
-  1: { nombre: nombre2, precio: precio2 },
-  2: { nombre: nombre3, precio: precio3 },
-} = productos;
-
-console.log(nombre1, precio1); */
+console.log(usuario2); */
