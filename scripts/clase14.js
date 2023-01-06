@@ -1,14 +1,12 @@
-/* setTimeout(() => {
-  console.log("Hola mundo");
-}, 5000); */
-
-/* console.log("inicia el proceso");
+/* console.log("Inicio del proceso");
 
 setTimeout(() => {
   console.log("Mitad del proceso");
-}, 3000);
+}, 2000);
 
-console.log("fin del proceso"); */
+console.log("Fin del proceso"); */
+
+// LIFO // last in / first out
 
 /* console.log("primero");
 
@@ -26,7 +24,7 @@ new Promise((resolve) => {
   resolve("promesa");
 }).then(console.log);
 
-console.log("Ultimo");
+console.log("ultimo");
 
 function funcion() {
   console.log("funcion");
@@ -34,16 +32,21 @@ function funcion() {
 
 funcion(); */
 /* 
-const aplicarDescuento = new Promise((resolve, reject) => {
-  const descuento = false;
+setInterval(() => {
+  console.log("Mostrando info");
+}, 3000); */
+
+/* const aplicarDescuento = new Promise((resolve, reject) => {
+  const descuento = true;
+
   if (descuento) {
-    resolve("descuento aplicado");
+    resolve("Descuento aplicado");
   } else {
     reject("No se pudo aplicar el descuento");
   }
 });
 
-// then - catch
+console.log(aplicarDescuento);
 
 aplicarDescuento
   .then((resultado) => {
@@ -56,22 +59,21 @@ aplicarDescuento
 
 const productos = [
   { id: 1, nombre: "producto1", precio: 1000 },
-  { id: 2, nombre: "producto2", precio: 2000 },
-  { id: 3, nombre: "producto3", precio: 3000 },
+  { id: 2, nombre: "producto2", precio: 1500 },
+  { id: 3, nombre: "producto3", precio: 2000 },
 ];
 
-const buscarID = (id) => {
+const findProdById = (id) => {
   const prod = productos.find((item) => item.id === id);
-
   return new Promise((resolve, reject) => {
     if (prod) {
       resolve(prod);
     } else {
-      reject("No se ha encontrado el producto");
+      reject("No se encuentra el producto");
     }
   });
 };
 
-buscarID(5)
+findProdById(3)
   .then((prod) => console.log(prod))
   .catch((err) => console.log(err));
